@@ -1,0 +1,6 @@
+from enum import Enum
+
+class Prompts(Enum):
+
+    CLEAN_REQUEST = """A RESPOSTA DEVE ESTAR EM FORMATO TEXTUAL, OU SEJA, NÃO UTILIZE CÓDIGOS DE PROGRAMAÇÃO!
+"""

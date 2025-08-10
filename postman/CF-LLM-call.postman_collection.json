@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "4c8474d0-113d-451a-aa2c-5dd55d5f9201",
+		"name": "CF-LLM-call",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34268498"
+	},
+	"item": [
+		{
+			"name": "Completions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"model\": \"gemini-2.5-flash\", \r\n    \"contents\": \"Qual é a sua versão?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:10000/llm/completions",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "10000",
+					"path": [
+						"llm",
+						"completions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

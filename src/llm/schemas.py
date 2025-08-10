@@ -1,21 +1,19 @@
+"""Schemas to handle LLM calls and responses."""
+
 from dataclasses import dataclass
-from typing import List, Field
-from os import environ
+from typing import List
 
 
 @dataclass
-class Message:
-    role: str 
-    content: str
+class RequestLLM:
+    """Data for make a request to Gemini."""
+
+    model: str
+    contents: str | List[str]
 
 
 @dataclass
-class LLMData:
-    model: str = Field(default="deepseek-chat")
-    messages: List[Message]
+class LLMResponse:
+    """Data retrieved by the LLM."""
 
-
-@dataclass
-class Headers:
-    Authorization: str = Field(default=f"Bearer {environ.get('LLM_API_KEY')}")
-    Content-Type: str = Field(default="application/json")
+    content: List[str]
